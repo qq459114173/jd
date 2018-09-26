@@ -1,0 +1,178 @@
+@import 'base.less';
+
+/* 头部区域部分 */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding: 0.4rem 0 0.5rem;
+    max-width: 7.5rem;
+    margin: 0 auto;
+}
+
+#header {
+    background-color: #f5f5f5;
+    display: flex;
+    height: 0.45rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    max-width: 7.5rem;
+    .icon-back {
+        padding: 0.1rem;
+        width: 0.4rem;
+        height: 0.4rem;
+        background: url(../images/sprites.png);
+        background-size: 2rem 2rem;
+        background-origin: content-box;
+        background-clip: content-box;
+        background-position: -0.2rem 0;
+    }
+    form {
+        flex: 1;
+        width: 100%;
+        position: relative;
+        margin-top: 0.05rem;
+        >i {
+            width: 0.2rem;
+            height: 0.2rem;
+            background: url(../images/sprites.png);
+            background-position: -0.6rem -1.07rem;
+            background-size: 2rem 2rem;
+            position: absolute;
+            top: 0.03rem;
+            left: 0.1rem;
+        }
+        >input {
+            width: 100%;
+            height: 0.3rem;
+            border-radius: 0.15rem;
+            padding-left: 0.35rem;
+            font-size: 0.12rem;
+        }
+    }
+    .icon-menu {
+        padding: 0.1rem;
+        width: 0.4rem;
+        height: 0.4rem;
+        background: url(../images/sprites.png);
+        background-size: 2rem 2rem;
+        background-origin: content-box;
+        background-clip: content-box;
+        background-position: -0.6rem 0;
+    }
+}
+
+
+/* 主体区域 */
+
+#main {
+    height: 100%;
+    display: flex;
+    /* 侧边栏区域 */
+    #aside {
+        height: 100%;
+        overflow: hidden;
+        width: 0.85rem;
+        height: 100%;
+        background-color: #f5f5f5;
+        >.container {
+            height: 100%;
+            .swiper-container {
+                height: 100%;
+                .swiper-slide {
+                    height: auto;
+                    >ul {
+                        li {
+                            a {
+                                display: block;
+                                font-size: 0.14rem;
+                                text-align: center;
+                                line-height: 0.46rem;
+                                color: @aColor;
+                            }
+                            &.active {
+                                a {
+                                    color: @mainColor;
+                                    background-color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* 主体内容区域 */
+    .swiper-container {
+        width: 100%;
+        .swiper-slide {
+            height: auto;
+            .article {
+                height: 100%;
+                overflow: hidden;
+                flex: 1;
+                .title {
+                    h4 {
+                        font-size: 0.14rem;
+                        margin-left: 0.1rem;
+                    }
+                }
+                .content {
+                    padding: 0.1rem;
+                    >ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        >li {
+                            width: 33.33%;
+                            >a {
+                                display: block;
+                                width: 100%;
+                                text-align: center;
+                                >img {
+                                    width: 0.7rem;
+                                }
+                                span {
+                                    display: block;
+                                    font-size: 0.12rem;
+                                    margin-top: 0.05rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* 尾部区域部分 */
+
+#footer {
+    height: 0.5rem;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    bottom: 0;
+    max-width: 7.5rem;
+    >ul {
+        display: flex;
+        >li {
+            flex: 1;
+            >a {
+                display: block;
+                text-align: center;
+                img {
+                    width: 0.65rem;
+                    height: 0.5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,318 @@
+/* 在主页的样式去引入公共的样式文件 */
+/* 定义全局变量 */
+* {
+  /* 去除移动端按住元素的时候会出现高亮背景色 */
+  -webkit-tap-highlight-color: transparent;
+  /*在移动端设置盒模型border-box 为了防止元素加边框或者padding出现水平滚动条*/
+  box-sizing: border-box;
+  outline: 0 none;
+}
+body,
+div,
+span,
+p,
+header,
+nav,
+main,
+section,
+aside,
+article,
+a,
+ul,
+li,
+input,
+button,
+img,
+i {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 100px;
+}
+body {
+  background-color: #fff;
+  font: 16px/100% '微软雅黑';
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+input,
+button {
+  outline: 0 none;
+  border: 0 none;
+}
+img {
+  border: 0 none;
+  vertical-align: middle;
+}
+i {
+  font-style: normal;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix::after {
+  content: '';
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  display: block;
+}
+.clearfix {
+  *zoom: 1;
+}
+.border-top {
+  border-top: 0.01rem solid #ccc;
+}
+.border-bottom {
+  border-bottom: 0.01rem solid #ccc;
+}
+.border-left {
+  border-left: 0.01rem solid #ccc;
+}
+.border-right {
+  border-right: 0.01rem solid #ccc;
+}
+/* 头部区域样式 */
+body {
+  max-width: 7.5rem;
+  margin: 0 auto;
+}
+#header {
+  z-index: 999;
+  height: 0.45rem;
+  display: flex;
+  padding: 0.05rem 0.1rem 0;
+  text-align: center;
+  background-color: rgba(222, 24, 27, 0);
+  position: fixed;
+  width: 100%;
+  max-width: 7.5rem;
+}
+#header .icon-logo {
+  background: url(../images/sprites.png);
+  width: 0.58rem;
+  height: 0.23rem;
+  display: block;
+  background-position: 0 -1.07rem;
+  background-size: 2rem 2rem;
+  margin-top: 0.01rem;
+  margin-right: 0.1rem;
+}
+#header form {
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+#header form > i {
+  width: 0.2rem;
+  height: 0.2rem;
+  background: url(../images/sprites.png);
+  background-position: -0.6rem -1.07rem;
+  background-size: 2rem 2rem;
+  position: absolute;
+  top: 0.03rem;
+  left: 0.1rem;
+}
+#header form > input {
+  width: 100%;
+  height: 0.3rem;
+  border-radius: 0.15rem;
+  padding-left: 0.3rem;
+  font-size: 0.12rem;
+}
+#header .login {
+  width: 0.5rem;
+  height: 0.3rem;
+  float: right;
+  color: #fff;
+  line-height: 0.3rem;
+  font-size: 0.14rem;
+}
+/* 轮播图区域 */
+#shideshow .swiper-container a {
+  display: block;
+  width: 100%;
+}
+#shideshow .swiper-container a img {
+  width: 100%;
+}
+#shideshow .swiper-container .swiper-pagination-bullet {
+  border: 0.01rem solid #fff;
+  opacity: 1;
+  background-color: transparent;
+}
+#shideshow .swiper-container .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+/* 导航区域 */
+#nav {
+  background-color: #fff;
+  padding: 0.1rem;
+}
+#nav > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+#nav > ul > li {
+  width: 25%;
+}
+#nav > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#nav > ul > li > a img {
+  width: 0.4rem;
+  height: 0.4rem;
+}
+#nav > ul > li > a p {
+  font-size: 0.14rem;
+  margin: 0.1rem;
+}
+/* 主体区域 */
+#main {
+  background-color: #f5f5f5;
+  padding: 0.2rem 0.1rem 0.6rem 0.1rem;
+  /* 秒杀部分 */
+  /*  京东超市部分 */
+}
+#main > .skill {
+  background-color: #fff;
+  box-shadow: 0px 0px 0.01rem #ccc;
+  margin-bottom: 0.1rem;
+  /* 秒杀内容区域 */
+}
+#main > .skill > .title {
+  height: 0.3rem;
+}
+#main > .skill > .title > .clock {
+  width: 0.2rem;
+  height: 0.25rem;
+  margin-left: 0.03rem;
+  margin-top: 0.03rem;
+}
+#main > .skill > .title .hotskill {
+  font-size: 0.14rem;
+  color: #e93b3d;
+  margin-left: 0.05rem;
+  margin-right: 0.05rem;
+}
+#main > .skill > .title .skillTime span {
+  width: 0.15rem;
+  height: 0.15rem;
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  text-align: center;
+}
+#main > .skill > .title .skillTime span:nth-of-type(3n) {
+  background-color: #fff;
+  color: #666;
+}
+#main > .skill > .title .more {
+  float: right;
+  font-size: 0.14rem;
+  color: #666;
+  line-height: 0.3rem;
+  margin-right: 0.1rem;
+}
+#main > .skill > .content ul {
+  display: flex;
+  width: 100%;
+}
+#main > .skill > .content ul li {
+  flex: 1;
+}
+#main > .skill > .content ul li a {
+  display: block;
+  text-align: center;
+}
+#main > .skill > .content ul li a img {
+  width: 100%;
+}
+#main > .skill > .content ul li a p {
+  color: #e93b3d;
+}
+#main > .skill > .content ul li a del {
+  color: #666;
+}
+#main > .skill > .content ul li:nth-of-type(1) {
+  border-right: 0.01rem solid #ccc;
+}
+#main > .skill > .content ul li:nth-of-type(2) {
+  border-right: 0.01rem solid #ccc;
+}
+#main .market > .title {
+  background-color: #fff;
+  padding-left: 0.3rem;
+  position: relative;
+  border-bottom: 0.01rem solid #ccc;
+}
+#main .market > .title h4 {
+  height: 0.3rem;
+  line-height: 0.3rem;
+  font-weight: normal;
+}
+#main .market > .title h4::before {
+  content: '';
+  width: 0.04rem;
+  height: 0.15rem;
+  background-color: #e93b3d;
+  position: absolute;
+  left: 0.15rem;
+  top: 0.08rem;
+}
+#main .market > .content {
+  display: flex;
+}
+#main .market > .content > .left {
+  flex: 1;
+}
+#main .market > .content > .left > a {
+  display: block;
+}
+#main .market > .content > .left > a img {
+  width: 100%;
+}
+#main .market > .content > .right {
+  flex: 1;
+}
+#main .market > .content > .right a {
+  display: block;
+}
+#main .market > .content > .right a > img {
+  width: 100%;
+}
+/* 尾部区域部分 */
+#footer {
+  height: 0.5rem;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  bottom: 0;
+  max-width: 7.5rem;
+}
+#footer > ul {
+  display: flex;
+}
+#footer > ul > li {
+  flex: 1;
+}
+#footer > ul > li > a {
+  display: block;
+  text-align: center;
+}
+#footer > ul > li > a img {
+  width: 0.65rem;
+  height: 0.5rem;
+}

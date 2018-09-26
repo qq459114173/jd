@@ -1,0 +1,262 @@
+/* 在主页的样式去引入公共的样式文件 */
+
+@import 'base.less';
+
+/* 头部区域样式 */
+
+body {
+    max-width: 7.5rem;
+    margin: 0 auto;
+}
+
+#header {
+    z-index: 999;
+    height: 0.45rem;
+    display: flex;
+    padding: 0.05rem 0.1rem 0;
+    text-align: center;
+    background-color: rgba(222, 24, 27, 0);
+    position: fixed;
+    width: 100%;
+    max-width: 7.5rem;
+    .icon-logo {
+        background: url(../images/sprites.png);
+        width: 0.58rem;
+        height: 0.23rem;
+        display: block;
+        background-position: 0 -1.07rem;
+        background-size: 2rem 2rem;
+        margin-top: 0.01rem;
+        margin-right: 0.1rem;
+    }
+    form {
+        flex: 1;
+        width: 100%;
+        position: relative;
+        >i {
+            width: 0.2rem;
+            height: 0.2rem;
+            background: url(../images/sprites.png);
+            background-position: -0.6rem -1.07rem;
+            background-size: 2rem 2rem;
+            position: absolute;
+            top: 0.03rem;
+            left: 0.1rem;
+        }
+        >input {
+            width: 100%;
+            height: 0.3rem;
+            border-radius: 0.15rem;
+            padding-left: 0.3rem;
+            font-size: 0.12rem;
+        }
+    }
+    .login {
+        width: 0.5rem;
+        height: 0.3rem;
+        float: right;
+        color: #fff;
+        line-height: 0.3rem;
+        font-size: 0.14rem;
+    }
+}
+
+
+/* 轮播图区域 */
+
+#shideshow {
+    .swiper-container {
+        a {
+            display: block;
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        .swiper-pagination-bullet {
+            border: 0.01rem solid #fff;
+            opacity: 1;
+            background-color: transparent;
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #fff;
+        }
+    }
+}
+
+
+/* 导航区域 */
+
+#nav {
+    background-color: #fff;
+    padding: 0.1rem;
+    >ul {
+        display: flex;
+        flex-wrap: wrap;
+        >li {
+            width: 25%;
+            >a {
+                display: block;
+                text-align: center;
+                img {
+                    width: 0.4rem;
+                    height: 0.4rem;
+                }
+                p {
+                    font-size: 0.14rem;
+                    margin: 0.1rem;
+                }
+            }
+        }
+    }
+}
+
+
+/* 主体区域 */
+
+#main {
+    background-color: #f5f5f5;
+    padding: 0.2rem 0.1rem 0.6rem 0.1rem;
+    /* 秒杀部分 */
+    >.skill {
+        background-color: #fff;
+        box-shadow: 0px 0px 0.01rem #ccc;
+        margin-bottom: 0.1rem;
+        >.title {
+            height: 0.3rem;
+            >.clock {
+                width: 0.2rem;
+                height: 0.25rem;
+                margin-left: 0.03rem;
+                margin-top: 0.03rem;
+            }
+            .hotskill {
+                font-size: 0.14rem;
+                color: @mainColor;
+                margin-left: 0.05rem;
+                margin-right: 0.05rem;
+            }
+            .skillTime {
+                span {
+                    width: 0.15rem;
+                    height: 0.15rem;
+                    background-color: #000;
+                    color: #fff;
+                    display: inline-block;
+                    text-align: center;
+                    &:nth-of-type(3n) {
+                        background-color: #fff;
+                        color: @aColor;
+                    }
+                }
+            }
+            .more {
+                float: right;
+                font-size: 0.14rem;
+                color: #666;
+                line-height: 0.3rem;
+                margin-right: 0.1rem;
+            }
+        }
+        /* 秒杀内容区域 */
+        >.content {
+            ul {
+                display: flex;
+                width: 100%;
+                li {
+                    flex: 1;
+                    a {
+                        display: block;
+                        text-align: center;
+                        img {
+                            width: 100%;
+                        }
+                        p {
+                            color: @mainColor;
+                        }
+                        del {
+                            color: #666;
+                        }
+                    }
+                    &:nth-of-type(1) {
+                        border-right: 0.01rem solid @borderColor;
+                    }
+                    &:nth-of-type(2) {
+                        border-right: 0.01rem solid @borderColor;
+                    }
+                }
+            }
+        }
+    }
+    /*  京东超市部分 */
+    .market {
+        >.title {
+            background-color: #fff;
+            padding-left: 0.3rem;
+            position: relative;
+            border-bottom: 0.01rem solid @borderColor;
+            h4 {
+                height: 0.3rem;
+                line-height: 0.3rem;
+                font-weight: normal;
+                &::before {
+                    content: '';
+                    width: 0.04rem;
+                    height: 0.15rem;
+                    background-color: @mainColor;
+                    position: absolute;
+                    left: 0.15rem;
+                    top: 0.08rem;
+                }
+            }
+        }
+        >.content {
+            display: flex;
+            >.left {
+                flex: 1;
+                >a {
+                    display: block;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            >.right {
+                flex: 1;
+                a {
+                    display: block;
+                    >img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* 尾部区域部分 */
+
+#footer {
+    height: 0.5rem;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    bottom: 0;
+    max-width: 7.5rem;
+    >ul {
+        display: flex;
+        >li {
+            flex: 1;
+            >a {
+                display: block;
+                text-align: center;
+                img {
+                    width: 0.65rem;
+                    height: 0.5rem;
+                }
+            }
+        }
+    }
+}
